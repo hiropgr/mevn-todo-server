@@ -1,0 +1,83 @@
+<!DOCTYPE html><html lang=en><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><link rel=icon href=/favicon.ico><title>TODOs</title><link rel=stylesheet href="https://fonts.googleapis.com/css?family=Nunito:100,300,400,500,700,900"><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css><link href=/css/app.5c0d40c6.css rel=preload as=style><link href=/css/chunk-vendors.48b5d4d0.css rel=preload as=style><link href=/js/app.895c8d14.js rel=preload as=script><link href=/js/chunk-vendors.b04fa019.js rel=preload as=script><link href=/css/chunk-vendors.48b5d4d0.css rel=stylesheet><link href=/css/app.5c0d40c6.css rel=stylesheet></head><body><noscript><strong>We're sorry but todo-app doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id=app><div id=loader-container><div class=tetrominos><div class="tetromino box1"></div><div class="tetromino box2"></div><div class="tetromino box3"></div><div class="tetromino box4"></div></div></div></div><script src=/js/chunk-vendors.b04fa019.js></script><script src=/js/app.895c8d14.js></script></body></html><style>body, html {
+    height: 100%;
+  }
+
+  .tetrominos {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-112px, -80px);
+  }
+
+  .tetromino {
+    width: 96px;
+    height: 112px;
+    position: absolute;
+    transition: all ease .3s;
+    background: url('data:image/svg+xml;utf-8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 612 684"%3E%3Cpath fill="%23010101" d="M305.7 0L0 170.9v342.3L305.7 684 612 513.2V170.9L305.7 0z"/%3E%3Cpath fill="%23fff" d="M305.7 80.1l-233.6 131 233.6 131 234.2-131-234.2-131"/%3E%3C/svg%3E') no-repeat top center;
+  }
+
+  .box1 {
+    animation: tetromino1 1.5s ease-out infinite;
+  }
+
+  .box2 {
+    animation: tetromino2 1.5s ease-out infinite;
+  }
+
+  .box3 {
+    animation: tetromino3 1.5s ease-out infinite;
+    z-index: 2;
+  }
+
+  .box4 {
+    animation: tetromino4 1.5s ease-out infinite;
+  }
+
+  @keyframes tetromino1 {
+    0%, 40% {
+      transform: translate(0, 0);
+    }
+
+    50% {
+      transform: translate(48px, -27px);
+    }
+
+    60%, 100% {
+      transform: translate(96px, 0);
+    }
+  }
+
+  @keyframes tetromino2 {
+    0%, 20% {
+      transform: translate(96px, 0px);
+    }
+
+    40%, 100% {
+      transform: translate(144px, 27px);
+    }
+  }
+
+  @keyframes tetromino3 {
+    0% {
+      transform: translate(144px, 27px);
+    }
+
+    20%, 60% {
+      transform: translate(96px, 54px);
+    }
+
+    90%, 100% {
+      transform: translate(48px, 27px);
+    }
+  }
+
+  @keyframes tetromino4 {
+    0%, 60% {
+      transform: translate(48px, 27px);
+    }
+
+    90%, 100% {
+      transform: translate(0, 0);
+    }
+  }</style>
